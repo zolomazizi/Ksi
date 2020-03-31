@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ShellAppSample.Views.HomeScreen"
+             BackgroundImageSource="backgound.png"
+             >
+              
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <StackLayout HorizontalOptions="Center"    VerticalOptions="Center" Margin="10,10,0,10" Padding="0,0,0,0">
+                <Label FontFamily="sans-serif-light" Text="Bienvenue dans notre application" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
+                <Label  Text="KSI" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
+            </StackLayout>
+
+            <Grid Grid.Row="1" HorizontalOptions="Center" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="2" Grid.Column="0" Text="Log in" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Login" BackgroundColor="#16B4C8" CornerRadius="7"/>
+                <Button Grid.Row="2" Grid.Column="1" Text="Register" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Register" BackgroundColor="#16B4C8" CornerRadius="7"/>
+                <Label Grid.Row="3" Margin="0,20,0,0" Grid.Column="0" HorizontalOptions="Center" FontSize="Medium" Grid.ColumnSpan="2" Text="OU"></Label>
+                <Button Grid.Row="4" Text="Test"  Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Test" BackgroundColor="#16B4C8" CornerRadius="7"/>
+            </Grid>
+
+
+
+
+
+
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

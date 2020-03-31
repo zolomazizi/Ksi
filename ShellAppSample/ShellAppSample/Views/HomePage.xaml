@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             xmlns:viewModel="clr-namespace:ShellAppSample.ViewModels"
+             mc:Ignorable="d"
+             x:Class="ShellAppSample.Views.HomePage">
+    <ContentPage.BindingContext>
+        <viewModel:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout"
+                     Command="{Binding LogoutCommand}"
+                     Clicked="Logout_Clicked"
+            />
+
+
+    </ContentPage.ToolbarItems>
+    <AbsoluteLayout>
+        <Image
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="Fill"
+            Source="home.jpg"/>
+        <ScrollView
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All">
+
+
+            <StackLayout
+                Padding="20,30">
+
+
+
+                <!-- scan -->
+                <StackLayout
+                    Margin="0,0,0,20"
+                    Padding="0,0,80,0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        Text=""
+                        TextColor="White"/>
+                    <!--Text="Classify transaction"-->
+                    <Label
+                        Text=""
+                        TextColor="White"/>
+                    <!--Text="Classify this transaction into a particular category"-->
+                </StackLayout>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="150"/>
+                </Grid.RowDefinitions>
+
+
+                
+                <!-- Scan -->
+                <border:SfBorder
+                        BackgroundColor="WhiteSmoke"
+                        BorderWidth="0"
+                        CornerRadius="25"
+                        Margin="0,0,0,10"
+                        Opacity=".7">
+                    <StackLayout
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand">
+                        <border:SfBorder
+                                BorderWidth="0"
+                                CornerRadius="30"
+                                HeightRequest="60"
+                                Margin="0,0,0,5"
+                                WidthRequest="60">
+                            <AbsoluteLayout>
+                                <gradient:SfGradientView
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                    <gradient:SfGradientView.BackgroundBrush>
+                                        <gradient:SfLinearGradientBrush>
+                                            <gradient:SfLinearGradientBrush.GradientStops>
+                                                <gradient:SfGradientStop Color="White" Offset="0.0"/>
+                                                    <gradient:SfGradientStop Color="#16B4C8" Offset="0.4"/>
+                                                    <gradient:SfGradientStop Color="#16B4C8" Offset="1.0"/>
+                                            </gradient:SfLinearGradientBrush.GradientStops>
+                                        </gradient:SfLinearGradientBrush>
+                                    </gradient:SfGradientView.BackgroundBrush>
+                                </gradient:SfGradientView>
+                                <ImageButton Clicked="Scan"
+                                        AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        Source="scan.png"/>
+                            </AbsoluteLayout>
+                        </border:SfBorder>
+                        <Label
+                                HorizontalTextAlignment="Center"
+                                Text="Scan"
+                                TextColor="Blue"/>
+                    </StackLayout>
+                </border:SfBorder>
+                <!-- test -->
+                <border:SfBorder
+                        BackgroundColor="WhiteSmoke"
+                        BorderWidth="0"
+                        CornerRadius="25"
+                        Grid.Column="2"
+                        Margin="0,0,0,10"
+                        Opacity=".7">
+                    <StackLayout
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand">
+                        <border:SfBorder
+                                BorderWidth="0"
+                                CornerRadius="30"
+                                HeightRequest="60"
+                                Margin="0,0,0,5"
+                                WidthRequest="60">
+                            <AbsoluteLayout>
+                                <gradient:SfGradientView
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                    <gradient:SfGradientView.BackgroundBrush>
+                                        <gradient:SfLinearGradientBrush>
+                                            <gradient:SfLinearGradientBrush.GradientStops>
+                                                <gradient:SfGradientStop Color="White" Offset="0.0"/>
+                                                    <gradient:SfGradientStop Color="#16B4C8" Offset="0.4"/>
+                                                    <gradient:SfGradientStop Color="#16B4C8" Offset="1.0"/>
+                                            </gradient:SfLinearGradientBrush.GradientStops>
+                                        </gradient:SfLinearGradientBrush>
+                                    </gradient:SfGradientView.BackgroundBrush>
+                                </gradient:SfGradientView>
+                                <ImageButton Clicked="Test"
+                                        AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        Source="tab_feed.png"/>
+                            </AbsoluteLayout>
+                        </border:SfBorder>
+                        <Label
+                                HorizontalTextAlignment="Center"
+                                Text="Test"
+                                TextColor="Blue"/>
+                    </StackLayout>
+                </border:SfBorder>
+                <!-- AddFriend -->
+                <border:SfBorder
+                        BackgroundColor="WhiteSmoke"
+                        BorderWidth="0"
+                        CornerRadius="25"
+                        Grid.Row="1"
+                        Margin="0,0,0,10"
+                        Opacity=".7">
+                    <StackLayout
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand">
+                        <border:SfBorder
+                                BorderWidth="0"
+                                CornerRadius="30"
+                                HeightRequest="60"
+                                Margin="0,0,0,5"
+                                WidthRequest="60">
+                            <AbsoluteLayout>
+                                <gradient:SfGradientView
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                    <gradient:SfGradientView.BackgroundBrush>
+                                        <gradient:SfLinearGradientBrush>
+                                            <gradient:SfLinearGradientBrush.GradientStops>
+                                                <gradient:SfGradientStop Color="White" Offset="0.0"/>
+                                                    <gradient:SfGradientStop Color="#16B4C8" Offset="0.4"/>
+                                                    <gradient:SfGradientStop Color="#16B4C8" Offset="1.0"/>
+                                            </gradient:SfLinearGradientBrush.GradientStops>
+                                        </gradient:SfLinearGradientBrush>
+                                    </gradient:SfGradientView.BackgroundBrush>
+                                </gradient:SfGradientView>
+                                <ImageButton Clicked="AddFriend"
+                                        AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        Source="AddFriend.png"/>
+                            </AbsoluteLayout>
+                        </border:SfBorder>
+                        <Label
+                                HorizontalTextAlignment="Center"
+                                Text="Ajouter"
+                                TextColor="Blue"/>
+                    </StackLayout>
+                </border:SfBorder>
+
+                <!-- Reseau -->
+                <border:SfBorder
+                        BackgroundColor="WhiteSmoke"
+                        BorderWidth="0"
+                        CornerRadius="25"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Margin="0,0,0,10"
+                        Opacity=".7">
+                    <StackLayout
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand">
+                        <border:SfBorder
+                                BorderWidth="0"
+                                CornerRadius="30"
+                                HeightRequest="60"
+                                Margin="0,0,0,5"
+                                WidthRequest="60">
+                            <AbsoluteLayout>
+                                <gradient:SfGradientView
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                    <gradient:SfGradientView.BackgroundBrush>
+                                        <gradient:SfLinearGradientBrush>
+                                            <gradient:SfLinearGradientBrush.GradientStops>
+                                                <gradient:SfGradientStop Color="White" Offset="0.0"/>
+                                                    <gradient:SfGradientStop Color="#16B4C8" Offset="0.4"/>
+                                                    <gradient:SfGradientStop Color="#16B4C8" Offset="1.0"/>
+                                            </gradient:SfLinearGradientBrush.GradientStops>
+                                        </gradient:SfLinearGradientBrush>
+                                    </gradient:SfGradientView.BackgroundBrush>
+                                </gradient:SfGradientView>
+                                <ImageButton Clicked="Network"
+                                        AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        Source="network.png"/>
+                            </AbsoluteLayout>
+                        </border:SfBorder>
+                        <Label
+                                HorizontalTextAlignment="Center"
+                                Text="Réseau"
+                                TextColor="Blue"/>
+                    </StackLayout>
+                </border:SfBorder>
+
+
+              
+                </Grid>
+            </StackLayout>
+        
+        </ScrollView>
+    </AbsoluteLayout>
+</ContentPage>

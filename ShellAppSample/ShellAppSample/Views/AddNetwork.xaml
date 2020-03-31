@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShellAppSample.Views.AddNetwork">
+    <NavigationPage.TitleView >
+        <Grid BackgroundColor="Accent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Back"
+                   TextColor="White"
+                   Grid.Column="0" />
+            <Image Source="icon.png"
+                   Grid.Column="1" />
+            <Image Source="options.png"
+                   Grid.Column="2" />
+        </Grid>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <Grid>
+            
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="700" />
+                <RowDefinition Height="*"/>
+                
+
+            </Grid.RowDefinitions>
+            <StackLayout HorizontalOptions="Center"    VerticalOptions="Center" Margin="10,10,10,10" Padding="0,0,0,0">
+                <Entry x:Name="EmailAdd" Placeholder="Please Enter Email Here" PlaceholderColor="#16B4C8" FontSize="16"/>
+                <Button Clicked="Button_Clicked" Text="Add Friend" BackgroundColor="#16B4C8" TextColor="White" HeightRequest="50" VerticalOptions="Start"/>
+            </StackLayout>
+
+            <!--<Grid Grid.Row="1" HorizontalOptions="Center" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="EmailAdd" Placeholder="Please Enter Email Here" PlaceholderColor="#bababa" FontSize="16"/>
+            <Button Clicked="Button_Clicked" Text="Add Friend" BackgroundColor="#3897f0" TextColor="White" HeightRequest="50" VerticalOptions="Start"/>
+            </Grid>-->
+
+
+
+
+
+
+        </Grid>
+        <!--<StackLayout>
+            <Entry x:Name="EmailAdd" Placeholder="Please Enter Email Here" PlaceholderColor="#bababa" FontSize="16"/>
+            <Button Clicked="Button_Clicked" Text="Add Friend" BackgroundColor="#3897f0" TextColor="White" HeightRequest="50" VerticalOptions="Start"/>
+        </StackLayout>-->
+        
+    </ContentPage.Content>
+</ContentPage>

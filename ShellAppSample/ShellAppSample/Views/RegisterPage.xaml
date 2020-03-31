@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <!--<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShellAppSample.Views.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>-->
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShellAppSample.Views.RegisterPage"
+             xmlns:vm="clr-namespace:ShellAppSample.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:RegisterViewModel/>
+    </ContentPage.BindingContext>
+    <!--<StackLayout Orientation="Vertical"
+                 VerticalOptions="Center"
+                 
+                 >
+        <Entry Text="{Binding Username}"
+               Placeholder="Enter Your Username"
+               />
+        <Entry Text="{Binding Password}"
+               Placeholder="Enter Your Password"
+               IsPassword="True"
+               />
+        <Entry Text="{Binding ConfirmPassword}"
+               Placeholder="Confirm Your Password"
+               IsPassword="True"/>
+        <Button Command="{Binding RegisterCommand}"
+                Text="Register"/>
+        <Button Text="Go To Login Page"
+                Clicked="Button_Clicked"/>
+    </StackLayout>-->
+    <ScrollView>
+        <Grid BackgroundColor="White">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0" Grid.Row="0">
+
+
+                
+                <Image Source="mediaw.png" Opacity="0.6" VerticalOptions="Start" Margin="0,3,0,0"/>
+
+            </StackLayout>
+
+            <Grid Grid.Row="1" Margin="20,0,20,0">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <Image Source="Samir.png" HeightRequest="70" VerticalOptions="EndAndExpand"/>
+                <Entry Text="{Binding Username}" Grid.Row="1" Placeholder="Enter Your Email" PlaceholderColor="#16B4C8" FontSize="16"/>
+                <Entry Text="{Binding Password}" Grid.Row="2" Placeholder="Password" PlaceholderColor="#16B4C8" FontSize="16" IsPassword="True"/>
+                <Entry Text="{Binding ConfirmPassword}" Grid.Row="3" Placeholder="Confirm Password" PlaceholderColor="#16B4C8" FontSize="16" IsPassword="True"/>
+
+                <Button Command="{Binding RegisterCommand}" Text="Register" BackgroundColor="#16B4C8" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="4"/>
+               
+
+                <Grid Grid.Row="6">
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+
+
+
+                    </Grid.ColumnDefinitions>
+                    <Label BackgroundColor="#black" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                    <!--<Label Text="" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0"/>-->
+                    <Image Source="gf.png" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0"/>
+
+
+                    <Label BackgroundColor="#black" Grid.Column="2" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+
+
+
+                </Grid>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="7">
+
+
+                   
+
+
+                </StackLayout>
+
+            </Grid>
+
+            <StackLayout Grid.Row="2" BackgroundColor="#ffffff">
+
+                <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+                <Button Text="Have you an account ?" VerticalOptions="FillAndExpand" Clicked="BackToLogin" BackgroundColor="#16B4C8" TextColor="White" HeightRequest="50"/>
+
+
+            </StackLayout>
+
+
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

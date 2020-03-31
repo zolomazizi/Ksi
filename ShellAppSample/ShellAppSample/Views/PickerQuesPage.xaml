@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShellAppSample.Views.PickerQuesPage"
+             BackgroundColor="WhiteSmoke">
+
+
+
+    <ContentPage.Content >
+
+        <ScrollView>
+            
+            <StackLayout  Margin="20,30,20,30" >
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit" FontSize="Large" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="10 , 20,10,20" />
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat" FontSize="Small"  Margin="10 , 20,10,20" />
+                    </StackLayout>
+                    <StackLayout>
+
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout  Padding="10" >
+
+                    <Label Text="1-Voyage ou dans une Zone à Risque ?"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" 
+                       
+                       
+                       
+                       />
+                    <Picker Title="sélect à réponse"
+                    
+                    TextColor="Black"
+                    TitleColor="Black"
+                    BackgroundColor="#16B4C8"
+                    FontFamily="Micro"
+                    FontSize="Medium"
+                    ItemsSource="{Binding rep}"
+                    ItemDisplayBinding="{Binding Rep}"
+                    SelectedItem="{Binding SelectedRep}"/>
+                   
+
+                </StackLayout>
+                <StackLayout Padding="10" >
+                    <Label Text="2-Contact avec un malade confirmé ?"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" />
+
+                    <Picker Title="sélect à réponse"
+                    
+                    TextColor="Black"
+                    TitleColor="Black"
+                    BackgroundColor="#16B4C8"
+                    FontFamily="Micro"
+                    FontSize="Medium"
+                    ItemsSource="{Binding rep1}"
+                    ItemDisplayBinding="{Binding Rep}"
+                    SelectedItem="{Binding SelectedRep1}"/>
+                   
+
+                </StackLayout >
+
+                <StackLayout Padding="10">
+                    <Label Text="3-Est-ce que vous toussez ?"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" />
+
+
+                    <Picker Title="sélect à réponse"
+                   
+                    TextColor="Black"
+                    TitleColor="Black"
+                    BackgroundColor="#16B4C8"
+                    FontFamily="Micro"
+                    FontSize="Medium"
+                    ItemsSource="{Binding rep2}"
+                    ItemDisplayBinding="{Binding Rep}"
+                    SelectedItem="{Binding SelectedRep2}" />
+                  
+
+                </StackLayout>
+                <StackLayout Padding="10">
+                    <Label Text="4-Ressentez vous de la Fièvre ?"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" />
+                    <Picker Title="sélect à réponse"
+                    
+                    TextColor="Black"
+                    TitleColor="Black"
+                    BackgroundColor="#16B4C8"
+                    FontFamily="Micro"
+                    FontSize="Medium"
+                    ItemsSource="{Binding rep3}"
+                    ItemDisplayBinding="{Binding Rep}"
+                    SelectedItem="{Binding SelectedRep3}" />
+                   
+
+                </StackLayout>
+
+                <StackLayout Padding="10">
+                    <Label Text="5-Céphalées et Migraines ?"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" />
+
+                    <Picker Title="sélect à réponse"
+                   
+                    TextColor="Black"
+                    TitleColor="Black"
+                    BackgroundColor="#16B4C8"
+                    FontFamily="Micro"
+                    FontSize="Medium"
+                    ItemsSource="{Binding rep4}"
+                    ItemDisplayBinding="{Binding Rep}"
+                    SelectedItem="{Binding SelectedRep4}" />
+                   
+
+                </StackLayout>
+
+                <StackLayout Padding="10">
+                    <Label Text="6-Souffrez-vous de diarrhée ou de Vomissements?"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" />
+
+                    <Picker Title="sélect à réponse"
+                 
+                    TextColor="Black"
+                    TitleColor="Black"
+                    BackgroundColor="#16B4C8"
+                    FontFamily="Micro"
+                    FontSize="Medium"
+                    ItemsSource="{Binding rep5}"
+                    ItemDisplayBinding="{Binding Rep}"
+                    SelectedItem="{Binding SelectedRep5}"/>
+                    
+
+                </StackLayout>
+
+                <StackLayout Padding="10">
+                    <Label Text="7-Souffrez-vous de maladies chroniques ou de co morbidité ?"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" />
+
+                    <Picker Title="sélect à réponse "
+                    
+                    TextColor="Black"
+                    TitleColor="Black"
+                    BackgroundColor="#16B4C8"
+                    FontFamily="Micro"
+                    FontSize="Medium"
+                    ItemsSource="{Binding rep6}"
+                    ItemDisplayBinding="{Binding Rep}"
+                    SelectedItem="{Binding SelectedRep6}"/>
+                   
+
+                </StackLayout>
+
+                <StackLayout Padding="10">
+                    <Label Text="8-renez vous des médicaments ?"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" />
+
+                    <Picker Title="sélect à réponse"
+                  
+                    TextColor="Black"
+                    TitleColor="Black"
+                    BackgroundColor="#16B4C8"
+                    FontFamily="Micro"
+                    FontSize="Medium"
+                    ItemsSource="{Binding rep7}"
+                    ItemDisplayBinding="{Binding Rep}"
+                    SelectedItem="{Binding SelectedRep7}" />
+                   
+
+                </StackLayout>
+
+                <StackLayout Padding="10">
+                    <Label Text="9-Souffrez-vous d'une Conjonctivite ?"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" />
+
+                    <Picker Title="sélect à réponse"
+                     
+                    TextColor="Black"
+                    TitleColor="Black"
+                    BackgroundColor="#16B4C8"
+                    FontFamily="Micro"
+                    FontSize="Medium"
+                    ItemsSource="{Binding rep8}"
+                    ItemDisplayBinding="{Binding Rep}"
+                    SelectedItem="{Binding SelectedRep8}"/>
+                    
+
+                </StackLayout>
+
+                <StackLayout Padding="10">
+                    <Label Text="10-Eprouvez vous de la Fatigue ?"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" />
+
+
+                    <Picker Title="sélect à réponse"
+                    
+                            
+                    TextColor="Black"
+                    TitleColor="Black"
+                    BackgroundColor="#16B4C8"
+                    FontFamily="Micro"
+                    FontSize="Medium"
+                    ItemsSource="{Binding rep9}"
+                    ItemDisplayBinding="{Binding Rep}"
+                    SelectedItem="{Binding SelectedRep9}"/>
+
+                    
+                </StackLayout>
+
+                <StackLayout  Padding="10" Orientation="Horizontal" HorizontalOptions="Center">
+                    <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button Command="{Binding PostCommand}" Text="Submit" BackgroundColor="#16B4C8"  />
+
+                    </StackLayout>
+                    <StackLayout  Padding="10" Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button Clicked="Button_Clicked" Text="See your result" BackgroundColor="#16B4C8" />
+                    </StackLayout>
+                </StackLayout>
+                
+               
+                <StackLayout Padding="30,30,30,30" >
+                    <Label x:Name="StatusR"  FontSize="Large" HorizontalOptions="Center" HorizontalTextAlignment="Center" BackgroundColor="WhiteSmoke"   />
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
